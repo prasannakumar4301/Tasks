@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .redBus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin-bottom: auto;
+        }
+        .redBus > div {
+            text-align: center;
+            width: 33.3%;
+        }
+
+        .redBus1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin-bottom: auto;
+        }
+        .redBus1 > div {
+            text-align: center;
+            width: 33.3%;
+        }
+
+        .redBus2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+        }
+        .redBus2 > div {
+            text-align: center;
+            width: 33.3%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="redBus">
+        <div>
+            <h3 id="busName"></h3>
+            <p id="isAC"></p>
+        </div>
+        <div>
+            <h2 id="startTime"></h3>
+        </div>
+        <div>
+            <p id="duration"></p>
+        </div>
+        <div>
+            <h2 id="endTime"></h3>
+        </div>
+        <div>
+            <h2 id="price"></h3>
+        </div>
+    </div>
+
+    <div class="redBus1">
+        <div>
+            <h3 id="busName1"></h3>
+            <p id="isAC1"></p>
+        </div>
+        <div>
+            <h2 id="startTime1"></h3>
+        </div>
+        <div>
+            <p id="duration1"></p>
+        </div>
+        <div>
+            <h2 id="endTime1"></h3>
+        </div>
+        <div>
+            <h2 id="price1"></h3>
+        </div>
+    </div>
+
+    <div class="redBus2">
+        <div>
+            <h3 id="busName2"></h3>
+            <p id="isAC2"></p>
+        </div>
+        <div>
+            <h2 id="startTime2"></h3>
+        </div>
+        <div>
+            <p id="duration2"></p>
+        </div>
+        <div>
+            <h2 id="endTime2"></h3>
+        </div>
+        <div>
+            <h2 id="price2"></h3>
+        </div>
+    </div>
+
+
+<script>
+    var redBus = [
+        {
+            busName: 'Nuego',
+            startTime: '9:00 AM',
+            endTime: '4:00 PM',
+            duration: '7 hrs',
+            isAC: true,
+            price: 'INR 850'
+        },
+        {
+            busName: 'IntrCity SmartBus',
+            startTime: '10:45 AM',
+            endTime: '6:45 PM',
+            duration: '8 hrs',
+            isAC: false,
+            price: 'INR 625'
+        },
+        {
+            busName: 'FreshBus',
+            startTime: '11:10 AM',
+            endTime: '5:10PM',
+            duration: '6 hrs',
+            isAC: true,
+            price: 'INR 1020'
+        }
+    ]
+
+
+
+    console.log(redBus);
+
+    document.getElementById('busName').innerHTML = redBus[0].busName;
+    document.getElementById('startTime').innerHTML = redBus[0].startTime;
+    document.getElementById('duration').innerHTML = redBus[0].duration;
+    document.getElementById('endTime').innerHTML = redBus[0].endTime;
+    document.getElementById('isAC').innerHTML = redBus[0].isAC ? 'AC' : 'Non-AC';
+    document.getElementById('price').innerHTML = redBus[0].price;
+
+    document.getElementById('busName1').innerHTML = redBus[1].busName;
+    document.getElementById('startTime1').innerHTML = redBus[1].startTime;
+    document.getElementById('duration1').innerHTML = redBus[1].duration;
+    document.getElementById('endTime1').innerHTML = redBus[1].endTime;
+    document.getElementById('isAC1').innerHTML = redBus[1].isAC ? 'AC' : 'Non-AC';
+    document.getElementById('price1').innerHTML = redBus[1].price;
+
+    document.getElementById('busName2').innerHTML = redBus[2].busName;
+    document.getElementById('startTime2').innerHTML = redBus[2].startTime;
+    document.getElementById('duration2').innerHTML = redBus[2].duration;
+    document.getElementById('endTime2').innerHTML = redBus[2].endTime;
+    document.getElementById('isAC2').innerHTML = redBus[2].isAC ? 'AC' : 'Non-AC';
+    document.getElementById('price2').innerHTML = redBus[2].price;
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
