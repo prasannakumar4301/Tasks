@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Enter mobile number: </label>
+        <input type="number" placeholder="enter valid no."  id="number">
+    </div>
+    <button onclick="getOtp()">Get OTP</button>
+    <div>
+        <h5>Status: <span id="output"></span></h5>
+    </div>
+
+    <script>
+        function getOtp() {
+            var number = document.getElementById('number').value;
+            var msg = 'OTP Sent';
+            console.log('msg');
+            document.getElementById('output').innerHTML = msg;
+            
+        }
+        
+
+
+
+
+
+    </script>
+
+</body>
+</html>
