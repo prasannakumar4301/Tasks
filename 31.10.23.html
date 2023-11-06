@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <label>Email:</label>
+    <input  placeholder="enter valid email" id="email id"/>
+    </div>
+    <div>
+    <label>Password:</label>
+    <input placeholder="enter password" id="password"/>
+    </div>
+    <p id="message"></p>
+    <button onclick="userLogin(correctDetails, wrongDetails)">Login</button>
+
+    <script>
+        var User = {
+            emailId: 'prasannakumar4301@gmail.com',
+            dbEmailId: 'prasannakumar4301@gmail.com',
+            password: 'prasannakumar4301',
+            dbPassword: 'prasannakumar4301'
+        };
+        console.log(User);
+
+        function correctDetails() {
+            console.log('login success');
+            document.getElementById('message').innerHTML = 'Login Successful.....';
+        }
+        function wrongDetails() {
+            console.log('incorrect details');
+            document.getElementById('message').innerHTML = 'Incorrect Details.....';
+        }
+        function userLogin(correctDetails, wrongDetails) {
+            document.getElementById('email id').innerHTML = User[0];
+            document.getElementById('password').innerHtml = User[2];
+            User[0] === User[1] ? correctDetails() : wrongDetails();
+            User[2] === User[3] ? correctDetails() : wrongDetails();
+        }
+    </script>
+</body>
+</html>
